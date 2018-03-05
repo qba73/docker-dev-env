@@ -6,9 +6,9 @@ NUMBER_OF_NODES = 2
 
 Vagrant.configure("2") do |config|
   config.vm.define "master" do |master|
-    manager.vm.box = BOX_IMAGE
-    manager.vm.hostname = "master"
-    manager.vm.network :private_network, ip: "10.0.0.10"
+    master.vm.box = BOX_IMAGE
+    master.vm.hostname = "master"
+    master.vm.network :private_network, ip: "10.0.0.10"
   end
 
   (1..NUMBER_OF_NODES).each do |n|
